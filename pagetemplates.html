@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates - The PC Department</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #ff7417;
+            border-radius: 4px;
+            color: black;
+        }
+
+        /* Templates Section */
+        .templates-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            background-image: url('chip.jpg'); /* Optional custom background */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .templates-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); /* Light overlay for readability */
+        }
+        .templates-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .template-card {
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        
+        }
+        .template-specs {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .template-specs ul {
+        list-style-type: none; /* Removes bullet points */
+        padding-left: 0;       /* Aligns text fully left */
+    }
+    .template-specs li {
+        margin-bottom: 0.5rem;
+    }
+        .template-card h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .template-card p {
+            margin-bottom: 1rem;
+        }
+        .template-card .price {
+            font-weight: bold;
+            color: #ff7417;
+            margin-bottom: 1rem;
+        }
+        .template-card button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .template-card button:hover {
+            background-color: #ff7417;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">The PC Dept.</div>
+            <ul class="nav-links">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="pagetemplates.html">Templates</a></li>
+                <li><a href="pageaboutme.html">About Me</a></li>
+                <li><a href="pagecontactme.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Templates Section -->
+    <section class="templates-section">
+        <div class="templates-intro">
+            <h1>PC Build Templates</h1>
+            <p>Explore our hand-crafted PC templates or contact us for a custom build!</p>
+        </div>
+        <div class="templates-grid">
+            <div class="template-card">
+                <h2>Low-End Template</h2>
+                <p>Perfect for basic tasks—web browsing, streaming, and light software. Includes an entry-level CPU and integrated graphics.</p>
+                <div class="template-specs">
+                    <ul>
+                        <li><strong>CPU:</strong> AMD Ryzen 3 3200G</li>
+            <li><strong>GPU:</strong> Integrated Radeon Vega 8</li>
+            <li><strong>RAM:</strong> 8GB DDR4</li>
+            <li><strong>Storage:</strong> 256GB SSD</li>
+            <li><strong>PSU:</strong> 400W</li>
+            <li><strong>Motherboard:</strong> MSI B450M PRO-VDH MAX</li>
+            <li><strong>Case:</strong>  DIYPC DIY-S07 ATX Mid Tower Case</li>
+            <li><strong>OS:</strong> Windows 11 Home</li>
+        </ul>
+    </div>
+                <div class="price">$520</div>
+                <button onclick="location.href='pagecontactme.html'">Order Now</button>
+            </div>
+            <div class="template-card">
+                <h2>Mid-Range Template</h2>
+                <p>Balanced performance for moderate gaming and productivity. Features a mid-tier GPU and CPU for smooth AAA gaming at lower settings.</p>
+                <div class="template-specs">
+        <ul>
+            <li><strong>CPU:</strong> AMD Ryzen 5 5600X</li>
+            <li><strong>GPU:</strong> Zotac GTX 1660 Super 6GB</li>
+            <li><strong>RAM:</strong> Corsair Vengeance LPX 16GB DDR4-2133</li>
+            <li><strong>Storage:</strong> Toshiba XG3 512GB NVMe SSD</li>
+            <li><strong>PSU:</strong> Thermaltake Smart 600W 80+</li>
+            <li><strong>Motherboard:</strong> ASUS PRIME B550M-A AC</li>
+            <li><strong>Case:</strong>  DIYPC DIY-S07 ATX Mid Tower Case</li>
+            <li><strong>OS:</strong> Windows 11 Home</li>
+        </ul>
+    </div>
+                <div class="price">$750 <small>(approx. $802 with tax, shipping, and labor)</small></div>
+                <button onclick="location.href='pagecontactme.html'">Order Now</button>
+            </div>
+            <div class="template-card">
+                <h2>High-End Template</h2>
+                <p>Top-tier power for gamers and creators. High-end GPU and CPU for AAA games at high FPS and heavy workloads.</p>
+                <div class="template-specs">
+        <ul>
+            <li><strong>CPU:</strong> AMD Ryzen 7 5800XT</li>
+            <li><strong>GPU:</strong> Gigabyte RTX 4060 8GB</li>
+            <li><strong>RAM:</strong> G.Skill Ripjaws V 32GB DDR4-3200</li>
+            <li><strong>Storage:</strong> Samsung 990 Pro 1TB NVMe SSD</li>
+            <li><strong>PSU:</strong> Corsair RM750e 750W 80+ Gold</li>
+            <li><strong>Motherboard:</strong> MSI B550-A PRO</li>
+            <li><strong>Case:</strong>  Lian Li Lancool 207 ATX Mid Tower Case</li>
+            <li><strong>OS:</strong> Windows 11 Home</li>
+        </ul>
+    </div>
+                <div class="price">$975 <small>(approx. $1043 with tax, shipping, and labor)</small></div>
+                <button onclick="location.href='pagecontactme.html'">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 ThePCDepartment.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

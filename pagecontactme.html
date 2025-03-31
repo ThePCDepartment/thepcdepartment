@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me- The PC Dept.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #ff7417;
+            border-radius: 4px;
+            color: black;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            background-image: url('desk.jpg');
+    background-size: cover;                         
+    background-position: center;                   
+    background-repeat: no-repeat;                  
+    position: relative;                            
+    min-height: 100vh;
+        }
+        .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);               
+    z-index: 0;                                     
+}
+        .contact-form {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-form h1, .contact-info h2 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #ff7417;
+            color: #000000;
+        }
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">The PC Dept.</div>
+            <ul class="nav-links">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="pagetemplates.html">Templates</a></li>
+                <li><a href="pageaboutme.html">About Me</a></li>
+                <li><a href="pagecontactme.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Me Section -->
+    <section class="contact-section">
+        <div class="contact-form">
+            <h1>Contact Me</h1>
+            <form action="https://formspree.io/f/xeoalpny" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_next" value="https://thepcdepartment.com/thanks.html">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 The PC Department.com All rights reserved.</p>
+    </footer>
+</body>
+</html>

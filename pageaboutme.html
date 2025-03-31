@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me- The PC Dept.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #ff7417;
+            border-radius: 4px;
+            color: black;
+        }
+
+        /* Main Content */
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        background-image: url('aboutmebackground.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+        }
+        .about-section::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .about-text {          
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            color: white;
+        }
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">The PC Dept.</div>
+            <ul class="nav-links">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="pagetemplates.html">Templates</a></li>
+                <li><a href="pageaboutme.html">About Me</a></li>
+                <li><a href="pagecontactme.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>Hello! I'm Rhett, the creator of The PC Department. I really enjoyed designing this website, but I had a purpose in doing so.</p>
+            <p> I have spent many hours looking beyond the screen and into the hardware of the computer itself,</p>
+            <p> and now have a thourough knowledge of how to assemble a computer accurately and efficiently.</p>
+            <p>Even if i've never done so myself, I would like to and this gave me an opportunity to do so.
+            <p>I also would like to acknowledge the fact that this is a solo operation,</p>
+            <p> so I do not and never will have amazing customer support, but as long as the company remains not too popular,</p>
+            <p> I should be expected to direct my full attention to the customer's complaint/problem.</p>
+            <p></p>
+            <p><strong>YOU MUST NOTE I WILL NOT BE SHIPPING OUTSIDE OF ELLIJAY GEORGIA FOR THE MOMENT UNLESS YOU ARE</strong></p>
+            <p><strong>WILLING TO MAKE THE DRIVE TO ELLIJAY</strong></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
